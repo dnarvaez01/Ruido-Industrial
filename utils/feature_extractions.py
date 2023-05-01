@@ -25,5 +25,6 @@ class FeatureExtractions:
     def __get_barrier_features__(self):
         self.dss = np.sqrt(self.barrier.distance**2 + 
                            (self.barrier.height-self.source.height)**2)
-        self.dsr = self.d-self.dss
+        self.dsr = np.sqrt((self.d-self.barrier.distance-self.barrier.e)**2 + 
+                           (self.barrier.height-self.receiver.height)**2)
         self.a = np.abs(self.receiver.height - self.source.height)

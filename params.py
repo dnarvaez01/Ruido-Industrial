@@ -3,8 +3,10 @@ from dataclasses import dataclass
 
 @dataclass
 class Params:
-    DISTANCE_TO_BARRIER = 30
-    BARRIER_HEIGHT = 3
+    RESULTS_DIR = 'F:\Dani\spl_values.xlsx'
+    DISTANCE_TO_BARRIER = 30 
+    BARRIER_HEIGHT = 2.4 #h in m
+    BARRIER_THICKNESS = 0.15 #e in cm
     SOURCE_POSITIONS = {'F1':(289782,6363955,1.2),
                         'F2':(289788,6363955,1.2),
                         'F3':(289782,6363979,1.2),

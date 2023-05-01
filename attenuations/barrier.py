@@ -10,8 +10,9 @@ class BarrierAttenuation(FeatureExtractions):
         self.receiver = receiver
         self.source = source
         self.barrier = barrier
-        self.e = barrier.e
         self.c2 = 20
+        if barrier:
+            self.e = barrier.e
         
     @property
     def z(self):
